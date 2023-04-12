@@ -839,7 +839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de443947f8bcd264c98863455e446b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerObject: {fileID: 0}
 --- !u!1 &388525029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,9 +2175,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 948471884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb7340a486317f4f9317a9756995752, type: 3}
+  m_Script: {fileID: 11500000, guid: 1796a227634c9784294860ae797966b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainScene: Main
+  challegneOneScene: AR Mesh Generator
+  challengeTwoScene: Sin Curve
 --- !u!1 &1014865284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,6 +4817,7 @@ GameObject:
   - component: {fileID: 139418267644158898}
   - component: {fileID: 139418267644158897}
   - component: {fileID: 139418267644158896}
+  - component: {fileID: 139418267644158899}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -4861,7 +4864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4886,6 +4889,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139418267644158895}
   m_CullTransparentMesh: 1
+--- !u!114 &139418267644158899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139418267644158895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
 --- !u!4 &212175866532230322
 Transform:
   m_ObjectHideFlags: 0
@@ -5138,8 +5154,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 948471886}
-        m_TargetAssemblyTypeName: ExitApp, Assembly-CSharp
-        m_MethodName: Exit
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: OnLoadMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5310,7 +5326,7 @@ PrefabInstance:
     - target: {fileID: 3012948037720165907, guid: 3fc425c32cd47624299076652d3c28cb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3012948037720165907, guid: 3fc425c32cd47624299076652d3c28cb,
         type: 3}
@@ -5321,7 +5337,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 948471886}
+      objectReference: {fileID: 0}
     - target: {fileID: 3012948037720165907, guid: 3fc425c32cd47624299076652d3c28cb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState

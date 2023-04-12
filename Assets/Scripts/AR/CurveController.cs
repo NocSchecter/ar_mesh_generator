@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Curve : MonoBehaviour
+public class CurveController : MonoBehaviour
 {
     public LineRenderer lineRenderer;
-    public Vector3 position;
+    public static LineRenderer sharedLineRender;
+
     public float amplitude = 1;
     public float waveLenght = 1;
-    public int size = 100;
+    public static int size = 50;
 
     private void Start()
     {
-        DrawSineWave(position, amplitude, waveLenght);
+        DrawSineWave(amplitude, waveLenght);
+        sharedLineRender = lineRenderer;
     }
 
-    void DrawSineWave(Vector3 startPoint, float amplitude, float wavelength)
+    //dibuja una curva basadose de la formuala sinosidal y = A * sin(k * x)
+    void DrawSineWave(float amplitude, float wavelength)
     {
         float x = 0f;
         float y;
@@ -25,7 +29,7 @@ public class Curve : MonoBehaviour
         {
             x += i * 0.001f;
             y = amplitude * Mathf.Sin(k * x);
-            lineRenderer.SetPosition(i, new Vector3(x, y, 0) + startPoint);
+            lineRenderer.SetPosition(i, new Vector3(x, y, 0) + this.gameObject.transform.position);
         }
     }
 }

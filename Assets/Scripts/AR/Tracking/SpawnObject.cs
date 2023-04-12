@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshCreator))]
 public class SpawnObject : MonoBehaviour
 {
     //Variable que hace referencia al script que calcula la posicion y rotacion del puntero
@@ -104,6 +103,9 @@ public class SpawnObject : MonoBehaviour
     //Se utiliza para desactivar la visualización de las líneas.
     public void DisableLines()
     {
+        if (!lineRenderer)
+            return;
+
         lineRenderer.enabled = false;
     }
 

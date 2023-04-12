@@ -3,7 +3,7 @@ using UnityEngine;
 public class PointerManager : MonoBehaviour
 {
     //Referencia al puntero (Felcha que aparece en la pantalla)
-    [SerializeField]private GameObject pointerObject;
+    private GameObject pointerObject;
 
     private void Awake()
     {
